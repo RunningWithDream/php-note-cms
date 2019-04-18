@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User-home</title>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <style>
+        .wrap-nav {
+            width: 100%;
+            text-align: left;
+            background-color: #393D49;
+        }
+
+        .content-nav {
+            width: 1140px;
+            height: 60px;
+            margin: 0 auto;
+            z-index: 10000;
+        }
+
+        .wrap-side {
+            top: 60px;
+            width: 200px;
+            overflow-x: hidden;
+            position: fixed;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrap-nav">
+    <div class="content-nav">
+        <ul class="layui-nav" lay-filter="demo">
+            <li class="layui-nav-item"><a href="">最新活动</a></li>
+            <li class="layui-nav-item layui-this">
+                <a href="javascript:;">产品</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="javascript:;">产品</a></dd>
+                    <dd><a href="javascript:;">产品2</a></dd>
+                    <dd><a href="javascript:;">产品3</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="">大数据</a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">解决方案</a>
+                <dd class="layui-nav-child">
+                    <dl><a href="javascript:;">移动</a></dl>
+                    <dl><a href="javascript:;">后台</a></dl>
+                    <dl><a href="" class="layui-this">电商（选中）</a></dl>
+                </dd>
+            </li>
+            <li class="layui-nav-item"><a href=""></a></li>
+        </ul>
+    </div>
+</div>
+<div class="layui-container">
+    <div class="layui-row">
+        <div class="layui-col-md3 wrap-side">
+            <div class="wrap-side">
+                <div class="layui-side">
+                    <div class="layui-side-scroll">
+                        <ul lay-filter="tree-nav" class="layui-nav layui-nav-tree layui-inline">
+                            <li class="layui-nav-item"><a href="javascript:;">默认展开</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a href="">选项1n <span class="layui-badge">9</span></a></dd>
+                                    <dd><a href="">选项2n <span class="layui-badge-dot"></span></a></dd>
+                                    <dd><a href="">选项3n</a></dd>
+                                </dl>
+                            </li>
+                            <li class="layui-nav-item"><a href="javascript:;">默认展开</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a href="">选项1n</a></dd>
+                                    <dd><a href="">选项2n</a></dd>
+                                    <dd><a href="">选项3n</a></dd>
+                                </dl>
+                            </li>
+                            <li class="layui-nav-item"><a href="javascript:;">默认展开</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a href="">选项1n</a></dd>
+                                    <dd><a href="">选项2n</a></dd>
+                                    <dd><a href="">选项3n</a></dd>
+                                </dl>
+                            </li>
+                            <li class="layui-nav-item"><a href="javascript:;">默认展开</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a href="">选项1n</a></dd>
+                                    <dd><a href="">选项2n</a></dd>
+                                    <dd><a href="">选项3n</a></dd>
+                                </dl>
+                            </li>
+                            <li class="layui-nav-item"><a href="javascript:;">默认展开</a>
+                                <dl class="layui-nav-child">
+                                    <dd><a href="">选项1n</a></dd>
+                                    <dd><a href="">选项2n</a></dd>
+                                    <dd><a href="">选项3n</a></dd>
+                                </dl>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md9">
+            <div class="layui-col-md4 layui-col-xs12">
+                <button class="layui-btn layui-btn-primary">原始按钮</button>
+                <button class="layui-btn layui-btn-normal">百搭按钮</button>
+                <button class="layui-btn layui-btn-danger layui-btn-radius">danger</button>
+                <div class="layui-btn-group">
+                    <button class="layui-btn layui-btn-primary"><i class="layui-icon layui-icon-home"></i>lfet</button>
+                    <button class="layui-btn layui-btn-primary">center</button>
+                    <button class="layui-btn layui-btn-primary">right</button>
+                </div>
+            </div>
+            <div class="layui-col-md12 layui-col-xs12">
+                <filedset class="layui-elem-filed layui-filed-title">
+                    表单
+                </filedset>
+                <form action="" class="layui-form">
+                    <div class="layui-col-md12 layui-form-item">
+                        <label for="username" class="layui-form-label">用户名</label>
+                        <div class="layui-input-block">
+                            <input type="text" class="layui-input" autocomplete="off" name="username" id="username">
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <div class="layui-form-item">
+                            <label for="username" class="layui-form-label">用户名</label>
+                            <div class="layui-input-block">
+                                <input type="text" class="layui-input" autocomplete="off" name="username" id="username">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <div class="layui-form-item">
+                            <label for="" class="layui-form-label">阅读时间</label>
+                            <div class="layui-input-inline" style="width: 37%;">
+                                <input type="text" class="layui-input">
+                            </div>
+                            <div class="layui-form-mid">-</div>
+                            <div class="layui-input-inline" style="width: 37%;">
+                                <input type="text" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <div class="layui-form-item">
+                            <label for="username" class="layui-form-label">用户名</label>
+                            <div class="layui-input-block">
+                                <input type="text" class="layui-input" autocomplete="off" name="username" id="username">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <div class="layui-form-item">
+                            <label for="username" class="layui-form-label">用户名</label>
+                            <div class="layui-input-block">
+                                <input type="text" class="layui-input" autocomplete="off" name="username" id="username">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="layui-col-md4">
+                        <div class="layui-form-item">
+                            <label for="username" class="layui-form-label">用户名</label>
+                            <div class="layui-input-block">
+                                <input type="text" class="layui-input" autocomplete="off" name="username" id="username">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md4">
+                        <div class="layui-form-item">
+                            <label for="username" class="layui-form-label">用户名</label>
+                            <div class="layui-input-block">
+                                <input type="text" class="layui-input" autocomplete="off" name="username" id="username">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md4">
+                        <div class="layui-form-item">
+                            <label for="username" class="layui-form-label">用户名</label>
+                            <div class="layui-input-block">
+                                <input type="text" class="layui-input" autocomplete="off" name="username" id="username">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <div class="layui-form-item">
+                            <label for="int" class="layui-form-label">单行选择</label>
+                            <div class="layui-input-block">
+                                <select name="int" id="int" lay-filter="int">
+                                    <option value="0">writing</option>
+                                    <option value="1" disabled>boxing</option>
+                                    <option value="2">riding</option>
+                                    <option value="3">runnning</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <div class="layui-form-item">
+                            <label for="" class="layui-form-label">复选框</label>
+                            <div class="layui-input-block">
+                                <input type="checkbox" name="like[write]" checked
+                                       title="写作">
+                                <input type="checkbox" name="like[read]" title="阅读">
+                                <input type="checkbox" name="like[game]" title="游戏">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <div class="layui-form-item">
+                            <label for="" class="layui-form-label">原始复选框</label>
+                            <input type="checkbox" lay-skin="primary" title="写作" name="like[write]">
+                            <input type="checkbox" lay-skin="primary" title="阅读" name="like[read]">
+                            <input type="checkbox" lay-skin="primary" title="游戏" name="like[game]">
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <div class="layui-form-item">
+                            <label for="" class="layui-form-label">开关-默认</label>
+                            <div class="layui-input-block">
+                                <input type="checkbox" name="close" lay-skin="switch" lay-text="NO|OFF">
+                                <input type="checkbox" name="close" checked lay-skin="switch" lay-text="NO|OFF">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <div class="layui-form-item">
+                            <label for="" class="layui-form-label">单选</label>
+                            <input type="radio" name="sex" value="female" title="女">
+                            <input type="radio" name="sex" value="male" title="男" checked>
+                        </div>
+                    </div>
+                    <div class="layui-col-md6">
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn layui-btn-normal" lay-submit>提交</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="layui-col-md4 layui-col-xs6 layui-bg-blue">1/4</div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+
+<script src="/layui/layui.js"></script>
+
+<script type="text/html">
+    <form action="" id="form_add_script" class="layui-form layui-layer-wrap">
+        <div class="layui-form-item">
+            <lable class="layui-form-label">用户名</lable>
+            <input type="text" name="name" value="name" class="layui-input layui-input-inline">
+        </div>
+    </form>
+</script>
+
+
+<!--layui框架封装-->
+<script>
+    //layer弹出层封装
+    //layer提供了5种层类型。可传入的值有：0（信息框，默认）1（页面层）2（iframe层）3（加载层）4（tips层）。
+
+
+    layui.use(['layer', 'form', 'element'], function () {
+        var $ = layui.jquery, layer = layui.layer, form = layui.form, element = layui.element;
+        var CONFIG = {
+            LAYER_TYPE: {
+                //弹出层类型
+                MSG: 0,//对话框
+                PAGE: 1,//单页面
+                IFRAME: 2,//iframe
+                LOAD: 3,//加载
+                TIPS: 4,//场景：错误提示，在错误地方提示错误信息
+            },
+            ICON_TYPE: {
+                //icon图标属性,只有信息层（0-6）和加载层（0-2）才有的参数
+                MSG: {
+                    NONE: -1,//默认，什么也不显示
+                    WARM: 0,//感叹号
+                    OK: 1,//对勾号
+                    ERROR: 2,//红叉
+                    QUES: 3,//问号
+                    LOCK: 4,//锁头
+                    CRY: 5,//哭脸
+                    SMILE: 6//笑脸
+                },
+                LOAD: {
+                    CIRCLE: 0,//旋转小圆圈
+                    RECTANGLE_SIMPLE: 1,//旋转长方形（简洁）
+                    RECTANGLE: 2 //旋转长方形
+                }
+            },
+            ANIM_TYPE: {
+                //动画方式，0-6
+                SCALE: 0,//缩放，平滑放大。默认
+                TOP_SLIDE: 1,//从上掉落
+                BOTTOM_SLIDE: 2,//从最底部往上滑入
+                LEFT_SLIDE: 3,//从左滑入
+                LEFT_ROLL: 4,//从左翻滚
+                FADE_IN: 5,//渐显
+                SHAKE: 6,//抖动
+
+            }
+        }
+
+        element.on('nav(demo)', function (elem) {
+            console.log(elem);
+            layer.msg(elem.text());
+        });
+
+        // layer.open({
+        //     id: 'form_add',//content层的ID
+        //     content: $('#form_add_script'),// 内容-可以是一个URL,使用ID引用时候，需要用layui-layer-wrap包裹一层才有效果
+        //     type: CONFIG.LAYER_TYPE.PAGE,
+        //     icon: CONFIG.ICON_TYPE.MSG.OK,//图标，只有信息层（0-6）和加载层（0-2）才有的参数
+        //     anim: CONFIG.ANIM_TYPE.BOTTOM_SLIDE,//动画方式，0-6
+        //     // skin:'demo-class',//弹出层的样式父级
+        //
+        //     offset: 'auto',// 弹出的初始位置，auto-默认水平垂直居中
+        //     area: ['500px', '280px'],//弹出层的宽度和高度
+        //
+        //
+        //     // time:5000,//自动关闭所需要的毫秒数
+        //     shadeClose: true,// 是否关闭遮罩层
+        //     shade: [0.8, '#393D49'],//遮罩层的透明度和颜色设置
+        //
+        //     closeBtn: 1,//关闭按钮风格，0/1-默认
+        //     btnAlign: 'center',//按钮对其方式 l/c/r
+        //     btn: ['确认', '取消'],
+        //     yes: function () {
+        //         console.log('yes:确认按钮');
+        //     },
+        //     btn2: function () {
+        //
+        //
+        //     },
+        //
+        //     title: 'Title',
+        //
+        //     success: function (obj_layer) {
+        //         //obj_layer 为弹出层对象
+        //         console.log('success://弹窗成功弹出后的回调');
+        //         console.log(obj_layer);
+        //         // layer.close(index);//关闭弹出层
+        //     },
+        //     cancel: function (index, layero) {
+        //         console.log('cancel://右上角关闭触发的回调');
+        //         // return false;//取消关闭动作
+        //     },
+        //     end: function () {
+        //         console.log('end://弹层销毁的回调，无论yes或者end后都会触发');
+        //     }
+        // });
+
+
+        var layerTool = {}
+
+
+    });
+
+</script>
+</html>

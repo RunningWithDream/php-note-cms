@@ -1,0 +1,93 @@
+{extend name="common/base"/}
+{block name="content"}
+<form class="layui-form layui-col-md11" lay-filter="news-form" style="padding-top: 10px;" >
+    <!--<input type="text" id="news_id" value="" hidden>-->
+    <div class="layui-form-item">
+        <label for="title" class="layui-form-label">标题</label>
+        <div class="layui-input-block">
+            <input autocomplete="off" type="text" name="title" value="" class="layui-input" id="title" lay-verify="required"lay-verType="tips" {if isset($flag)}{$flag}{/if}>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="sub" class="layui-form-label">概要</label>
+        <div class="layui-input-block">
+            <input autocomplete="off" type="text" name="sub" value="" class="layui-input" id="sub" lay-verify="required" lay-verType="tips">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="author" class="layui-form-label">作者</label>
+        <div class="layui-input-block">
+            <input autocomplete="off" type="text" name="author" class="layui-input" id="author" >
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label for="content" class="layui-form-label">笔记</label>
+        <div class="layui-input-block">
+            <textarea placeholder="请输入内容" class="layui-textarea" cols="" rows="20" name="content" id="content"></textarea>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-btn-group layui-input-block">
+            {if !isset($flag)}
+            <button class="layui-btn layui-btn-primary" lay-submit lay-filter="create">提交</button>
+            {/if}
+            <a class="layui-btn" href="{:url('index')}">返回</a>
+        </div>
+    </div>
+</form>
+{/block}
+{block name="script"}
+<script>
+    layui.use('form',function () {
+        var form = layui.form,$=layui.$,layer=layui.layer;
+        //校验规则
+        form.verify({
+            username: function(value, item){ //value：表单的值、item：表单的DOM对象
+                if(!new RegExp("^[a-zA-Z0-9_\u4e00-\u9fa5\\s·]+$").test(value)){
+                    return '用户名不能有特殊字符';
+                }
+                if(/(^\_)|(\__)|(\_+$)/.test(value)){
+                    return '用户名首尾不能出现下划线\'_\'';
+                }
+                if(/^\d+\d+\d$/.test(value)){
+                    return '用户名不能全为数字';
+                }
+            }
+
+            //我们既支持上述函数式的方式，也支持下述数组的形式
+            //数组的两个值分别代表：[正则匹配、匹配不符时的提示文字]
+            ,pass: [
+                /^[\S]{6,12}$/
+                ,'密码必须6到12位，且不能出现空格'
+            ]
+        });
+        form.on('submit(create)',function (data) {
+            console.log(data.field);
+            $.post('{:url("index/news/save")}',data.field,function (rdata) {
+                if(rdata.code==0){
+                    layer.msg(rdata.msg,{
+                        type: 0,
+                        icon: 1,
+                        time: 1000, //2秒关闭（如果不配置，默认是3秒）
+                    },function () {
+                       location.href = "{:url('index/news/index')}"
+                    });
+                }
+            });
+            return false;
+        });
+        {if isset($news_info)}
+        //表单初始赋值
+        form.val("news-form", {
+            'title':"{$news_info['title']}",
+            'author':"{$news_info['author']}",
+            'sub':"{$news_info['sub']}",
+            'content':`{$news_info['content']}`
+        })
+        {/if}
+    });
+</script>
+
+
+
+{/block}

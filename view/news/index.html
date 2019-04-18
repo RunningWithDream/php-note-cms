@@ -1,0 +1,45 @@
+{extend name="common/base"/}
+{block name="content"}
+<div style="padding: 10px;">
+    <table class="layui-table" id="news-list" lay-filter="news-list"></table>
+</div>
+<script type="text/html" id="toolbar">
+    <div class="layui-btn-group">
+        <a class="layui-btn layui-btn-xs" href="{{d.read}}">查看</a>
+        <a class="layui-btn layui-btn-xs layui-btn-primary" href="{{d.edit}}">编辑</a>
+        <button class="layui-btn layui-btn-xs layui-btn-danger" lay-event="delete">删除</button>
+    </div>
+</script>
+
+{/block}
+{block name="script"}
+<script>
+    layui.use(['table', 'layer', 'laytpl'], function () {
+        var table = layui.table, layer = layui.layer, $ = layui.jquery, laytpl = layui.laytpl;
+
+        table.render({
+            elem: '#news-list'
+            , url: '{:url("index/news/index")}'
+            , page: true //开启分页
+            , cols: [[ //表头
+                {field: 'title', title: '标题'}
+                , {field: 'sub', title: '概要'}
+                , {field: 'create_time', title: '创建时间'}
+                , {fixed: 'right', width: 200, align: 'center', toolbar: '#toolbar'}
+            ]]
+        });
+
+        table.on('tool(news-list)', function (obj) {
+            var data = obj.data;
+            switch (obj.event) {
+                case 'delete':
+                    $.post(data.delete,{_method:'DELETE'} ,function (rdata) {
+                        console.log(rdata);
+                    });
+                    break;
+            }
+        });
+
+    });
+</script>
+{/block}

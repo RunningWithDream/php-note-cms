@@ -1,0 +1,23 @@
+{extend name="common/base"/}
+{block name="content"}
+<form action="" class="layui-form" style="margin: 10px;">
+    <div class="layui-form-item"><label for="" class="layui-form-label">分类名称</label>
+        <div class="layui-input-block"><input type="text" class="layui-input"></div>
+    </div>
+    <div class="layui-form-item"><label for="" class="layui-form-label"></label>
+        <div class="layui-input-block"><input type="text" class="layui-input"></div>
+    </div>
+    <div class="layui-form-item"><label for="" class="layui-form-label"></label>
+        <div class="layui-input-block"><input type="text" class="layui-input"></div>
+    </div>
+</form>
+{/block}
+{block name="script"}
+<script>
+    layui.use('form',function(){
+
+        
+        var form = layui.form;
+    });
+</script>
+{/block}

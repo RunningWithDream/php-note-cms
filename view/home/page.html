@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>layout 后台大布局 - Layui</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <style>
+        .layui-center{
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo">layui 后台布局</div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+        <ul class="layui-nav layui-layout-left">
+            <li class="layui-nav-item"><a href="">控制台</a></li>
+            <li class="layui-nav-item"><a href="">商品管理</a></li>
+            <li class="layui-nav-item"><a href="">用户</a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">其它系统</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">邮件管理</a></dd>
+                    <dd><a href="">消息管理</a></dd>
+                    <dd><a href="">授权管理</a></dd>
+                </dl>
+            </li>
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    贤心
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="">退了</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a class="" href="javascript:;">所有商品</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">列表一</a></dd>
+                        <dd><a href="javascript:;">列表二</a></dd>
+                        <dd><a href="javascript:;">列表三</a></dd>
+                        <dd><a href="">超链接</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">解决方案</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">列表一</a></dd>
+                        <dd><a href="javascript:;">列表二</a></dd>
+                        <dd><a href="">超链接</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="">云市场</a></li>
+                <li class="layui-nav-item"><a href="">发布商品</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <div class="lay-row">
+            <div class="layui-col-md12 layui-center">
+                <div id="page"></div>
+            </div>
+        </div>
+        <div class="layui-row">
+            <div class="layui-col-md12">
+                <div id="pageTest"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        © layui.com - 底部固定区域
+    </div>
+</div>
+<script src="layui/layui.js"></script>
+<script>
+
+    layui.use(['laypage'], function () {
+        laypage = layui.laypage
+        laypage.render({
+            elem: 'pageTest'                //这是元素的id，不能写成"#pageTest"
+            , theme:'#575b59'               //主题颜色
+            , count: 50                      //数据总数
+            , limit: 10                      //每页显示条数
+            , limits: [10, 20, 30]
+            , curr: 1                        //起始页
+            , groups: 5                      //连续页码个数
+            , prev: '上一页'                 //上一页文本
+            , netx: '下一页'                 //下一页文本
+            , first: 1                      //首页文本
+            , last: 100                     //尾页文本
+            , layout: ['prev', 'page', 'next','limit','refresh','skip']
+
+            //跳转页码时调用
+            , jump: function (obj, first) { //obj为当前页的属性和方法，第一次加载first为true
+                //         do something
+                console.log(obj);
+                if (!first) {
+                    //非首次加载 do something
+                }
+            }
+        })
+    });
+
+
+    layui.use(['laypage','layer'], function(){
+        var layer = layui.laypage,laypage = layui.laypage;
+
+        //总页数低于页码总数
+        laypage.render({
+            elem: 'page',
+            limit:10,
+            limits:[10,20,30,40,50],
+            curr:location.hash.replace('&page=', ''),//当前页
+            hash:'page',
+            count: 50, //数据总数,服务端获取
+            theme:'#575b59',//
+            jump:function (obj,first) {
+                // console.log(obj);
+                // console.log(obj.curr);
+                // console.log(obj.limit);
+                if(!first){
+                    //首次不执行
+                    console.log('no first:');
+                    console.log(obj);
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>

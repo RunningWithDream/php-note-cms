@@ -1,0 +1,22 @@
+{extend name="common/base"/}
+{block name="content"}
+<div style="padding: 10px;">
+    <table class="layui-table" id="category-list" lay-filter="category-list"></table>
+</div>
+{/block}
+{block name="script"}
+<script>
+    layui.use(['table'], function () {
+        var table = layui.table;
+        table.render({
+             elem:'#category-list'
+            ,page:true
+            ,url:'{:url("index")}'
+            ,cols:[[
+                 {field:'name',title:'分类名称',minWidth:200}
+                ,{field:'active',title:'是否启用',minWidth:200}
+            ]]
+        });
+    });
+</script>
+{/block}

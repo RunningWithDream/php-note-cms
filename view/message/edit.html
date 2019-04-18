@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+</head>
+<body>
+
+
+<div class="layui-container">
+
+    <br>
+    <br>
+    <br>
+    <div class="layui-row">
+        <div class="layui-col-md2">
+        </div>
+        <div class="layui-col-md8">
+            <form id="msg_form">
+                <input type="text" value="{$msg['id']}" hidden>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">标题</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" id='title' lay-verify="required" autocomplete="off" class="layui-input" value="{$msg['title']}">
+                    </div>
+                </div>
+
+
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">请输入内容</label>
+                    <div class="layui-input-block">
+                        <textarea name="msg" placeholder="" id="msg" class="layui-textarea">
+                            {$msg['msg']}
+                        </textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit="" lay-filter="formDemo">修改</button>
+                        <a type="reset" class="layui-btn layui-btn-primary" href="{:url('message/index')}">返回</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="/layui/layui.all.js"></script>
+<script>
+    $ = layui.jquery;
+    $('#msg_form').submit(function () {
+        //前端校验
+        var data ={
+            "title":$('#title').val(),
+            "msg":$('#msg').val()
+        };
+        console.log(data);
+        $.post('{:url('message/update',array('id'=>$msg['id']))}',data,function(rdata) {
+            // rdata = $.parseJSON(rdata);
+            console.log(rdata);
+            switch (rdata.code) {
+                case 200:
+                    layer.msg(rdata.msg,function (index) {
+                        location.href = rdata.data;
+                    },{time:500,tips:2});
+
+                    break;
+                case 400:
+                    layer.alert(rdata.data,function (index) {
+                        layer.close(index);
+                    },{time:2000,tips:2});
+                    break;
+            }
+
+        });
+        return false;
+    });
+</script>
+
+</body>
+</html>

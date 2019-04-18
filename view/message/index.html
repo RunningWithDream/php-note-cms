@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Msg-List</title>
+    <link rel="stylesheet" href="/layui/css/layui.css">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="layui-container">
+
+    <br>
+    <br>
+    <br>
+    <div class="layui-row">
+        <div class="layui-col-md2">
+        </div>
+        <div class="layui-col-md8">
+            <a href="{:url('message/create')}" class="layui-btn">添加</a>
+            <table class="layui-table">
+                <colgroup>
+                    <col width="150">
+                    <col width="250">
+                    <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>标题</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                {foreach $msgs['data'] as $key=>$vo }
+                <tr>
+                    <td>{$vo.id}</td>
+                    <td>{$vo.title}</td>
+                    <td>
+                        <div class="layui-btn-group ">
+                            <a class="layui-btn layui-btn-sm layui-btn-primary" href="{:url('message/edit',array('id'=>$vo.id))}">编辑</a>
+                            <button class="layui-btn layui-btn-sm layui-btn-danger" onclick="item.delete({$vo.id})">删除</button>
+                        </div>
+                    </td>
+                </tr>
+                {/foreach}
+                </tbody>
+            </table>
+
+            <div id="test1"></div>
+
+        </div>
+    </div>
+
+    <div class="layui-row">
+        <div class="layui-col-md2"></div>
+        <div class="layui-col-md8">
+            <table id="demo" lay-filter="test"></table>
+        </div>
+    </div>
+</div>
+
+
+<script src="/layui/layui.all.js"></script>
+
+<script>
+    var item = {
+        edit:function (id) {
+            window.location.href = '/message/'+id+'/edit';
+        },
+        delete:function (id) {
+            $.post('{:url('message/delete',array('id'))}',{'_method':'DELETE','id':id},function (rdata) {
+                layui.use('layer', function(){
+                    var layer = layui.layer;
+                    layer.msg($.parseJSON(rdata).msg,function(layero, index){
+                        window.location.href = '/index/message/index?page='+1;
+                    });
+                });
+            });
+        }
+    }
+
+    layui.use(['laypage','table'], function(){
+        var laypage = layui.laypage;
+        var table = layui.table;
+        laypage.render({
+            elem: 'test1' //注意，这里的 test1 是 ID，不用加 # 号
+            ,count: {$msgs['count']} //数据总数，从服务端得到
+            ,curr:{$msgs['page']}
+            ,limit:{$msgs['limit']}
+            ,jump: function(obj, first){
+                //obj包含了当前分页的所有参数，比如：
+                // console.log(obj.curr); //得到当前页，以便向服务端请求对应页的数据。
+                // console.log(obj.limit); //得到每页显示的条数
+                //首次不执行
+                if(!first){
+                    //do something
+                    window.location.href = '/index/message/index?page='+obj.curr;
+                }
+            }
+        });
+
+        var table_config = {
+            elem: '#demo'
+            ,height: 312
+            ,limit:5
+            ,url: '{:url('message/page')}' //数据接口
+            ,page: true //开启分页
+            ,count:29
+            ,cols: [[ //表头
+            {field: 'id', title: 'ID', width:150, sort: true, fixed: 'left'}
+            ,{field: 'title', title: '标题', width:250}
+            ,{field: '操作', title: '操作',templet: function(d){
+                    return`<div class="layui-btn-group ">
+                            <button class="layui-btn layui-btn-sm layui-btn-primary" lay-event="edit">编辑</button>
+                            <button class="layui-btn layui-btn-sm layui-btn-danger" lay-event="delete">删除</button>
+                        </div>`;
+                }}
+        ]]
+    };
+        table.render(table_config);
+        table.on('tool(test)', function(obj){ //注：tool是工具条事件名，test是table原始容器的属性 lay-filter="对应的值"
+            var data = obj.data; //获得当前行数据
+            var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
+            var tr = obj.tr; //获得当前行 tr 的DOM对象
+
+            if(layEvent === 'detail'){ //查看
+                console.log('detail');
+            } else if(layEvent === 'delete'){ //删除
+                layer.confirm('真的删除行么', function(index){
+                    obj.del(); //删除对应行（tr）的DOM结构，并更新缓存
+                    layer.close(index);
+                    //向服务端发送删除指令
+                    item.delete(data.id);
+                    //表格重载
+                    // table.reload('demo', table_config);
+                });
+            } else if(layEvent === 'edit'){ //编辑
+                //do something
+                item.edit(data.id);
+            }
+        });
+
+    });
+
+</script>
+
+</body>
+</html>

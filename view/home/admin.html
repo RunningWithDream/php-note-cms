@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>layout 后台大布局 - Layui</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo">layui 后台布局</div>
+        <!-- 头部区域（可配合layui已有的水平导航） -->
+        <ul class="layui-nav layui-layout-left">
+            <li class="layui-nav-item"><a href="">控制台</a></li>
+            <li class="layui-nav-item"><a href="">商品管理</a></li>
+            <li class="layui-nav-item"><a href="">用户</a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">其它系统</a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">邮件管理</a></dd>
+                    <dd><a href="">消息管理</a></dd>
+                    <dd><a href="">授权管理</a></dd>
+                </dl>
+            </li>
+        </ul>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img">
+                    贤心
+                </a>
+                <dl class="layui-nav-child">
+                    <dd><a href="">基本资料</a></dd>
+                    <dd><a href="">安全设置</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="">退了</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a class="" href="javascript:;">所有商品</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">列表一</a></dd>
+                        <dd><a href="javascript:;">列表二</a></dd>
+                        <dd><a href="javascript:;">列表三</a></dd>
+                        <dd><a href="">超链接</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">解决方案</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">列表一</a></dd>
+                        <dd><a href="javascript:;">列表二</a></dd>
+                        <dd><a href="">超链接</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="">云市场</a></li>
+                <li class="layui-nav-item"><a href="">发布商品</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div class="layui-row">
+            <div class="layui-col-md12" style="margin:10px;">
+                <span class="layui-breadcrumb" lay-separator="/">
+                    <a href="">首页</a>
+                    <a href="">演示</a>
+                    <a href=""><cite>导航元素</cite></a>
+                </span>
+            </div>
+        </div>
+        <div class="layui-row">
+            <div class="layui-tab layui-tab-brief layui-anim layui-anim-upbit"
+                 lay-filter="newtab" lay-allowclose="true">
+                <!--lay-allowclose="true"允许tab标签被关闭-->
+                <!--动画直接加上类名即可实现效果-->
+                <ul class="layui-tab-title">
+                    <li lay-id="1" class="layui-this">数据表</li>
+                    <li lay-id="2">日期控件</li>
+                    <li lay-id="3">代码格式</li>
+                    <li lay-id="4">动态数据表</li>
+                    <li lay-id="5">选项5</li>
+                </ul>
+                <div class="layui-tab-content layui-anim" data-anim="layui-anim-up">
+                    <div class="layui-tab-item layui-show">
+
+                        <div class="layui-row">
+                            <div class="layui-col-md12">
+                                <table class="layui-table" lay-skin="nob" lay-size="lg">
+                                    <!--lay-skin="line-行边框|row-列边框|nob-无边框"-->
+                                    <!--lay-size="lg-大号尺寸|sm-小号尺寸"-->
+                                    <colgroup>
+                                        <col width="200">
+                                        <col width="200">
+                                        <col width="200">
+                                        <col>
+                                    </colgroup>
+                                    <thead>
+                                    <tr>
+                                        <th>人物</th>
+                                        <th>民族</th>
+                                        <th>出场时间</th>
+                                        <th>格言</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>贤心</td>
+                                        <td>汉族</td>
+                                        <td>1989-10-14</td>
+                                        <td>人生似修行</td>
+                                    </tr>
+                                    <tr>
+                                        <td>张爱玲</td>
+                                        <td>汉族</td>
+                                        <td>1920-09-30</td>
+                                        <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Helen Keller</td>
+                                        <td>拉丁美裔</td>
+                                        <td>1880-06-27</td>
+                                        <td> Life is either a daring adventure or nothing.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>岳飞</td>
+                                        <td>汉族</td>
+                                        <td>1103-北宋崇宁二年</td>
+                                        <td>教科书再滥改，也抹不去“民族英雄”的事实</td>
+                                    </tr>
+                                    <tr>
+                                        <td>孟子</td>
+                                        <td>华夏族（汉族）</td>
+                                        <td>公元前-372年</td>
+                                        <td>猿强，则国强。国强，则猿更强！</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-tab-item">
+
+                        <div class="layui-row">
+                            <div class="layui-form">
+                                <div class="layui-col-md6">
+                                    <div class="layui-form-item">
+                                        <label for="" class="layui-form-label">日期</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" class="layui-input" id="test1">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-col-md6">
+                                    <div class="layui-form-item">
+                                        <label for="" class="layui-form-label">日期</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" class="layui-input" id="test2">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-col-md6">
+                                    <div class="layui-form-item">
+                                        <label for="" class="layui-form-label">年选择器</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" class="layui-input" id="test3">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-col-md6">
+                                    <div class="layui-form-item">
+                                        <label for="" class="layui-form-label">年月选择器</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" class="layui-input" id="test4">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-col-md6">
+                                    <div class="layui-form-item">
+                                        <label for="" class="layui-form-label">时间选择器</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" class="layui-input" id="test5">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-col-md6">
+                                    <div class="layui-form-item">
+                                        <label for="" class="layui-form-label">日期时间选择器</label>
+                                        <div class="layui-input-block">
+                                            <input type="text" class="layui-input" id="test6">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="layui-tab-item">
+      <pre class="layui-code" lay-title="Admin.php" lay-skin="notepad">
+namespace app\admin\controller;
+
+use think\Controller;
+use think\Request;
+
+class Home extends Controller
+{
+    public function index()
+    {
+        return $this->fetch();
+    }
+
+    public function admin()
+    {
+        return $this->fetch();
+    }
+}
+      </pre>
+
+                    </div>
+                    <div class="layui-tab-item">
+                    <table class="layui-hide" id="user-table"></table>
+                    </div>
+                    <div class="layui-tab-item">内容5</div>
+                </div>
+            </div>
+            <div class="site-demo-button" style="margin-bottom: 0;">
+                <button class="layui-btn site-demo-active" data-type="tabAdd">新增Tab项</button>
+                <button class="layui-btn site-demo-active" data-type="tabDelete">删除：商品管理</button>
+                <button class="layui-btn site-demo-active" data-type="tabChange">切换到：用户管理</button>
+            </div>
+        </div>
+        <div class="layui-row">
+            <div class="layui-col-md6">
+                <div class="wrap-progress layui-col-md4">
+                    <!--lay-showpercent进度条显示文字进度信息-->
+                    <div class="layui-progress" style="margin: 10px;" lay-showpercent="true">
+                        <div class="layui-progress-bar layui-bg-cyan" lay-percent="40%"></div>
+                    </div>
+                </div>
+                <div class="wrap-progress layui-col-md4">
+                    <div class="layui-progress" style="margin: 10px;" lay-showpercent="true">
+                        <div class="layui-progress-bar layui-bg-blue" lay-percent="2 / 3"></div>
+                    </div>
+                </div>
+                <div class="wrap-progress layui-col-md4">
+                    <div class="layui-progress" style="margin: 10px;">
+                        <div class="layui-progress-bar layui-bg-gray" lay-percent="40%"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md6">
+                <div class="site-demo-button" style="margin-top: 20px; margin-bottom: 0;">
+                    <button class="layui-btn site-demo-active" data-type="setPercent">设置50%</button>
+                    <button class="layui-btn site-demo-active" data-type="loading">模拟loading</button>
+                </div>
+
+                <div class="layui-progress layui-progress-big" style="margin: 10px;" lay-filter="demo"
+                     lay-showpercent="true">
+                    <div class="layui-progress-bar" lay-percent="40%"></div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-row">
+            <div class="layui-col-md6">
+                <div class="layui-card">
+                    <div class="layui-card-header">
+                        <blockquote class="layui-elem-quote" style="height: 10px;line-height: 10px;">面板标题</blockquote>
+                    </div>
+                    <div class="layui-card-body">
+                        面板主体 <br/>
+                        卡片式面板面板通常用于非白色背景色的主体内<br>
+                        从而映衬出边框投影
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-col-md6">
+                <div class="layui-collapse" lay-filter="test">
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title" data-id="13">折叠标题 <span
+                                class="layui-badge-dot layui-bg-cyan"></span></h2>
+                        <div class="layui-colla-content layui-show">
+                            <!-- layui-show打开面板显示的样式，tab的默认打开显示也是这样式-->
+                            <p>
+                                有不少其他答案说是因为JS太差。我下面的答案已经说了，这不是根本性的原因。但除此之外，我还要纠正一些对JS具体问题的误解。JS当初是被作为脚本语言设计的，所以某些问题并不是JS设计得差或者是JS设计者的失误。比如var的作用域问题，并不是“错误”，而是当时绝大部分脚本语言都是这样的，如perl/php/sh等。模块的问题也是，脚本语言几乎都没有模块/命名空间功能。弱类型、for-in之类的问题也是，只不过现在用那些老的脚本语言的人比较少，所以很多人都误以为是JS才有的坑。另外有人说JS是半残语言，满足不了开发需求，1999年就该死。半残这个嘛，就夸张了。JS虽然有很多问题，但是设计总体还是优秀的。——来自知乎@贺师俊</p>
+                        </div>
+                    </div>
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title" data-id="14">折叠标题 <span
+                                class="layui-badge layui-bg-green">6</span></h2>
+                        <div class="layui-colla-content">
+                            <p>
+                                有不少其他答案说是因为JS太差。我下面的答案已经说了，这不是根本性的原因。但除此之外，我还要纠正一些对JS具体问题的误解。JS当初是被作为脚本语言设计的，所以某些问题并不是JS设计得差或者是JS设计者的失误。比如var的作用域问题，并不是“错误”，而是当时绝大部分脚本语言都是这样的，如perl/php/sh等。模块的问题也是，脚本语言几乎都没有模块/命名空间功能。弱类型、for-in之类的问题也是，只不过现在用那些老的脚本语言的人比较少，所以很多人都误以为是JS才有的坑。另外有人说JS是半残语言，满足不了开发需求，1999年就该死。半残这个嘛，就夸张了。JS虽然有很多问题，但是设计总体还是优秀的。——来自知乎@贺师俊</p>
+                        </div>
+                    </div>
+                    <div class="layui-colla-item">
+                        <h2 class="layui-colla-title" data-id="15">折叠标题</h2>
+                        <div class="layui-colla-content">
+                            <p>
+                                有不少其他答案说是因为JS太差。我下面的答案已经说了，这不是根本性的原因。但除此之外，我还要纠正一些对JS具体问题的误解。JS当初是被作为脚本语言设计的，所以某些问题并不是JS设计得差或者是JS设计者的失误。比如var的作用域问题，并不是“错误”，而是当时绝大部分脚本语言都是这样的，如perl/php/sh等。模块的问题也是，脚本语言几乎都没有模块/命名空间功能。弱类型、for-in之类的问题也是，只不过现在用那些老的脚本语言的人比较少，所以很多人都误以为是JS才有的坑。另外有人说JS是半残语言，满足不了开发需求，1999年就该死。半残这个嘛，就夸张了。JS虽然有很多问题，但是设计总体还是优秀的。——来自知乎@贺师俊</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-row">
+            <div class="layui-cpl-md12">
+                <ul class="layui-timeline">
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis"></i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">8月18日</h3>
+                            <p> layui 2.0
+                                的一切准备工作似乎都已到位。发布之弦，一触即发。不枉近百个日日夜夜与之为伴。因小而大，因弱而强。无论它能走多远，抑或如何支撑？至少我曾倾注全心，无怨无悔</p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis"></i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">8月18日</h3>
+                            <p> layui 2.0
+                                的一切准备工作似乎都已到位。发布之弦，一触即发。不枉近百个日日夜夜与之为伴。因小而大，因弱而强。无论它能走多远，抑或如何支撑？至少我曾倾注全心，无怨无悔</p>
+                        </div>
+                    </li>
+                    <li class="layui-timeline-item">
+                        <i class="layui-icon layui-timeline-axis"></i>
+                        <div class="layui-timeline-content layui-text">
+                            <h3 class="layui-timeline-title">8月18日</h3>
+                            <p> layui 2.0
+                                的一切准备工作似乎都已到位。发布之弦，一触即发。不枉近百个日日夜夜与之为伴。因小而大，因弱而强。无论它能走多远，抑或如何支撑？至少我曾倾注全心，无怨无悔</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        © layui.com - 底部固定区域<span class="layui-word-aux" id="cutdown"></span>
+    </div>
+</div>
+
+<script src="layui/layui.js"></script>
+<script>
+    //JavaScript代码区域
+    layui.use(['element', 'layer', 'laydate','code','util','table'], function () {
+        var table = layui.table,util = layui.util,element = layui.element, $ = layui.jquery, layer = layui.layer, laydate = layui.laydate;
+
+        table.render({
+            elem:'#user-table',
+            cellMinWidth:150,
+            url:'',
+        });
+
+
+        //右侧导航栏
+        util.fixbar({
+            bar1:"&#xe68e;",
+            bar2:"&#xe68e;",
+            showHeight:20,
+            css:{right:50,bottom:50},
+            click:function (type) {
+                if(type === 'bar1'){
+                    location.href='/';
+                } else if(type === 'bar2') {
+                    layer.msg('两个bar都可以设定是否开启')
+                }
+            }
+        });
+
+        //倒计时
+        var thisTimer, setCountdown = function(y, M, d, H, m, s){
+            var endTime = new Date(y, M||0, d||1, H||0, m||0, s||0) //结束日期
+                ,serverTime = new Date(); //假设为当前服务器时间，这里采用的是本地时间，实际使用一般是取服务端的
+
+            clearTimeout(thisTimer);
+            util.countdown(endTime, serverTime, function(date, serverTime, timer){
+                var str = date[0] + '天' + date[1] + '时' +  date[2] + '分' + date[3] + '秒';
+                lay('#cutdown').html(str);
+                thisTimer = timer;
+            });
+        };
+        setCountdown(2099,1,1);
+        laydate.render({
+            elem: '#test1'
+            ,type: 'datetime'
+            ,done: function(value, date){
+                setCountdown(date.year, date.month - 1, date.date, date.hours, date.minutes, date.seconds);
+            }
+        });
+
+
+        //代码显示
+        layui.code({
+            about:false,//关闭右上角code提示信息
+        });
+
+        //时间日期控件
+        var ins1 = laydate.render({
+            elem:'#test1',
+            format:'yyyy-MM-dd HH:mm:ss',
+            min:'2019-1-1',
+            max:'2019-12-31',
+            calendar: true,//显示公立节日
+            theme:'grid',//主题:default（默认简约）、molv（墨绿背景）、#颜色值（自定义颜色背景）、grid（格子主题）
+
+            type:'datetime',
+            mark:{
+                '2019-4-16':'学习'
+            },
+            ready:function (value, date, endDate) {
+                console.log('ready');//控件打开的回调
+                console.log(value);
+            },
+            change:function (value, date, endDate) {
+                console.log('change');//时间日期被切换的回调
+                console.log(value);
+                ins1.hint(value); //在控件上弹出value值
+            },
+            done:function (value, date, endDate) {
+                console.log('done');//点击日期、清空、现在、确定均会触发。
+                console.log(date);
+            }
+        });
+        laydate.render({
+            elem:'#test2',
+            lang:'en'
+        });
+        laydate.render({
+            elem:'#test3',
+            type:'year'
+        });
+        laydate.render({
+            elem:'#test4',
+            type:'month'
+        });
+        laydate.render({
+            elem:'#test5',
+            type:'time'
+        });
+        laydate.render({
+            elem:'#test6',
+            type:'datetime'
+        });
+
+
+
+        //触发事件[tab,面板]
+        var active = {
+            //tab
+            tabAdd: function () {
+                //新增一个Tab项
+                element.tabAdd('newtab', {
+                    title: '新选项' + (Math.random() * 1000 | 0) //用于演示
+                    , content: '内容' + (Math.random() * 1000 | 0)
+                    , id: new Date().getTime() //实际使用一般是规定好的id，这里以时间戳模拟下，lay-id 里的内容
+                })
+            }
+            , tabDelete: function (othis) {
+                //删除指定Tab项
+                element.tabDelete('newtab', '44'); //删除：“商品管理”，44 ：lay-id 里的内容
+                othis.addClass('layui-btn-disabled');
+            }
+            , tabChange: function () {
+                //切换到指定Tab项
+                element.tabChange('newtab', '22'); //切换到：用户管理，22：lay-id 里的内容
+            }
+            //进度条
+            , setPercent: function () {
+                //设置50%进度
+                element.progress('demo', '50%')
+            }
+            , loading: function (othis) {
+                var DISABLED = 'layui-btn-disabled';
+                if (othis.hasClass(DISABLED)) return;
+                //模拟loading
+                var n = 0, timer = setInterval(function () {
+                    n = n + Math.random() * 10 | 0;
+                    if (n > 100) {
+                        n = 100;
+                        clearInterval(timer);
+                        othis.removeClass(DISABLED);
+                    }
+                    element.progress('demo', n + '%');
+                }, 300 + Math.random() * 1000);
+                othis.addClass(DISABLED);
+            }
+        };
+        $('.site-demo-active').on('click', function () {
+            var othis = $(this), type = othis.data('type');//data-type的属性值
+            active[type] ? active[type].call(this, othis) : '';
+        });
+
+        //Hash地址的定位-tab
+        var layid = location.hash.replace(/^#tab-page=/, '');//tab-page为地址值中的变量名
+        element.tabChange('newtab', layid);//newtab为tab控件的lay-filter属性值
+        element.on('tab(newtab)', function (elem) {
+            location.hash = 'tab-page=' + $(this).attr('lay-id');
+        });
+
+        //面板折叠的监听
+        element.on('collapse(test)', function (data) {
+            // var id = $(data.title).attr('data-id');//获取绑定参数的方式一
+            var id = $(data.title).data('id');//获取绑定参数的方式二
+            console.log(id);
+            layer.msg('展开状态:' + data.show);
+        });
+
+    });
+</script>
+</body>
