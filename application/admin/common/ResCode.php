@@ -20,6 +20,4 @@ class ResCode
     const USER_NOT_EXIST = [402,'user not exist'];
     const LOGIN_INFO_ERROR = [403,'login info error'];
 
-
-
 }

@@ -9,49 +9,34 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-Route::get('/','admin/Home/index');
-Route::get('admin','admin/Home/admin');
-Route::get('page','admin/Home/page');
-Route::get('test','admin/Home/test');
-Route::get('get','admin/Home/get');
 
-
-Route::resource('news','index/news')->vars(['news' => 'news_id']);
-Route::resource('category','index/category')->vars(['category' => 'category_id']);
-
-
-
-Route::resource('message','index/message');
-Route::get('message/page','@message/page');
-
-Route::group('api',function (){
-    Route::get('encode','@Api/encode');
-    Route::get('decode','@Api/decode');
-    Route::get('detest','@Api/detest');
-})->middleware('login');
-
-
-//Route::get('index','@Index/index');
-
-//Route::get('login','@Index/login');
-Route::get('bus','@Index/bus');
-
-Route::post('tologin','@Index/tologin');
-Route::post('tobus','@Index/tobus');
-
-
-
+Route::get('/','admin/Gate/login');
 Route::get('login','admin/Gate/login');
-Route::group(['middleware'=>['login']],function(){
-    Route::get('tologin','admin/Gate/tologin')->middleware('vlogin');
-    Route::get('home','admin/home/index');
-});
+Route::get('index','admin/Home/index');
+Route::get('welcome','admin/Home/welcome');
+
+
+Route::get('admin-list','admin/Admin/index');
+Route::get('admin-add','admin/Admin/create');
+Route::get('admin-edit','admin/Admin/edit');
+Route::post('admin-save','admin/Admin/save');
+
+
+Route::get('admin-role','admin/Role/index');
+Route::get('role-add','admin/Role/create');
 
 
 
 
 
 
-return [
+//Route::resource('news','index/news')->vars(['news' => 'news_id']);
+//Route::resource('category','index/category')->vars(['category' => 'category_id']);
 
-];
+
+//test - need-delete
+//Route::get('index','index/Home/index');
+//Route::get('admin','index/Home/admin');
+//Route::get('page','index/Home/page');
+//Route::get('test','index/Home/test');
+//Route::get('get','index/Home/get');

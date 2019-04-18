@@ -7,23 +7,33 @@ use think\Request;
 
 class Gate extends Controller
 {
+    /**
+     * 登录界面
+     *
+     * @return \think\Response
+     */
     public function login()
     {
-        return $this->fetch();
+        return $this->fetch('admin/gate/login');
     }
 
+    /**
+     * 登录逻辑
+     *
+     * @return \think\Response
+     */
     public function toLogin()
     {
-        //校验密码
-        echo '数据库校验密码';
-
+       //
+    }
+    /**
+     * 登出逻辑
+     *
+     * @return \think\Response
+     */
+    public function toLogout()
+    {
         //
-        echo '生成token写入用户信息';
-
-        //跳转
-
-
-        echo '跳转';
     }
 
 }

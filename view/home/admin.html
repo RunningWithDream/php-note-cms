@@ -357,13 +357,6 @@ class Home extends Controller
     layui.use(['element', 'layer', 'laydate','code','util','table'], function () {
         var table = layui.table,util = layui.util,element = layui.element, $ = layui.jquery, layer = layui.layer, laydate = layui.laydate;
 
-        table.render({
-            elem:'#user-table',
-            cellMinWidth:150,
-            url:'',
-        });
-
-
         //右侧导航栏
         util.fixbar({
             bar1:"&#xe68e;",

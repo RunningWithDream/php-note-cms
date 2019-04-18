@@ -24,7 +24,7 @@ class News extends Base
                 $data['edit'] = '/news/' . $data['news_id'] . '/edit';
                 $data['delete'] = '/news/' . $data['news_id'];
             }
-            $count = count($datas);
+            $count = NewsModel::count();
             return ['code' => 0, 'msg' => '', 'count' => $count, 'data' => $datas];
         }
         return $this->fetch();
