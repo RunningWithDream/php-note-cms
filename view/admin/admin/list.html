@@ -22,12 +22,6 @@
             <button class="layui-btn" lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
         </form>
     </div>
-    <xblock>
-        <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
-        <button class="layui-btn" onclick="x_admin_show('添加用户','./admin-add.html')"><i class="layui-icon "></i>添加
-        </button>
-    </xblock>
-
 
     <table id="list" lay-filter="users-table" class="layui-table"></table>
 
@@ -40,8 +34,14 @@
 
     <script type="text/html" id="status-bar">
         <div class="layui-inline layui-form">
-            <input type="checkbox" lay-skin="switch" lay-text="启用|禁用" data-id="{{d.id}}" lay-filter="status">
+            <input type="checkbox" lay-skin="switch" lay-text="启用|禁用" data-id="{{d.id}}" lay-filter="status" {{d.status==1?'checked':''}}>
         </div>
+    </script>
+
+
+    <script type="text/html" id="tool-bar">
+        <button class="layui-btn layui-btn-danger" lay-event="del-multi"><i class="layui-icon"></i>批量删除</button>
+        <button class="layui-btn" lay-event="add-new"><i class="layui-icon "></i>添加</button>
     </script>
 
 
@@ -51,13 +51,15 @@
 <script>
     layui.use(['laydate', 'form', 'table'], function () {
         var laydate = layui.laydate, form = layui.form, $ = layui.jquery, table = layui.table;
-
-        table.render({
+        //数据表渲染
+        var tableIns = table.render({
             elem: '#list'
             , url: '{:url("admin/admin/index")}' //数据接口
             , page: {
                 layout: ['prev', 'page', 'next', 'count'] //开启分页
             }
+            ,toolbar:'#tool-bar'
+            ,defaultToolbar:''
             , cols: [[ //表头
                 {type: 'checkbox'}
                 , {field: 'id', title: 'ID', width: 50}
@@ -71,33 +73,61 @@
             ]]
         });
 
+        //头工具监听
+        table.on('toolbar(users-table)', function(obj){
+            if(obj.event=='del-multi'){
+                var checkStatus = table.checkStatus(obj.config.id);
+                var data = checkStatus.data;
+                if(data.length<=0){
+                    layer.msg('请勾选数据');
+                    return false;
+                }
+                data = getFieldArr(data,'id');
+            }
+            switch(obj.event){
+                case 'add-new':
+                    x_admin_show('添加用户','./admin-add.html');
+                    break;
+                case 'del-multi':
+                    //删除
+                    tableOperate.del('{:url("admin/admin/delMulti")}',{id:data},function(data){
+                        layer.msg(data.msg, {icon: 1, time: 1000},function () {
+                            tableIns.reload();//删除表格行，并更新缓存
+                        });
+                    },function (data) {
+                        layer.msg(data.msg, {icon: 2, time: 1000},function () {
+                            tableIns.reload();//删除表格行，并更新缓存
+                        });
+                    });
+                    break;
+            };
+        });
 
+        //行监听
         table.on('tool(users-table)', function (obj) {
             var data = obj.data; //获得当前行数据
             var layEvent = obj.event; //获得 lay-event 对应的值（也可以是表头的 event 参数对应的值）
             var tr = obj.tr; //获得当前行 tr 的DOM对象
-
-
             switch (layEvent) {
                 case 'edit':
-                    x_admin_show('编辑', );
+                    x_admin_show('编辑信息',data.edit_url);
                     break;
                 case 'del':
+                    layer.confirm('确认要删除吗？', function (index) {
+                        //发异步删除数据
+                        $.post('{:url("admin/Admin/delete")}',{id:data.id},function (data) {
+                            layer.msg('已删除!', {icon: 1, time: 1000},function () {
+                                obj.del();//删除表格行，并更新缓存
+                            });
+                        });
+                    });
                     break;
             }
-
-
-            console.log(layEvent);
         });
-
 
         //状态开关监听
         form.on('switch(status)', function (data) {
-            console.log(data.elem); //得到checkbox原始DOM对象
-            console.log(data.elem.checked); //开关是否开启，true或者false
-            console.log(data.value); //开关value值，也可以通过data.elem.value得到
-            console.log(data.othis); //得到美化后的DOM对象
-            console.log($(data.elem).data('id'));
+            $.post('{:url("admin/Admin/status")}',{id:$(data.elem).data('id'),status:data.elem.checked?1:0});
         });
 
         //开始时间
@@ -112,26 +142,5 @@
 
     });
 
-
-    /*用户-删除*/
-    function member_del(obj, id) {
-        layer.confirm('确认要删除吗？', function (index) {
-            //发异步删除数据
-            $(obj).parents("tr").remove();
-            layer.msg('已删除!', {icon: 1, time: 1000});
-        });
-    }
-
-
-    function delAll(argument) {
-
-        var data = tableCheck.getData();
-
-        layer.confirm('确认要删除吗？' + data, function (index) {
-            //捉到所有被选中的，发异步进行删除
-            layer.msg('删除成功', {icon: 1});
-            $(".layui-form-checked").not('.header').parents('tr').remove();
-        });
-    }
 </script>
 {/block}

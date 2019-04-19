@@ -1,0 +1,1980 @@
+---------------------------------------------------------------
+[2019-04-10T08:19:53+08:00] 127.0.0.1 GET tp.top/
+[运行时间：0.023002s] [吞吐率：43.47req/s] [内存消耗：1,448.78kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../view/index\index.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-04-10T08:21:17+08:00] 127.0.0.1 GET tp.top/
+[运行时间：0.154009s] [吞吐率：6.49req/s] [内存消耗：1,556.03kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../view/gate\login.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-04-10T08:23:16+08:00] 127.0.0.1 GET tp.top/login
+[运行时间：0.027002s] [吞吐率：37.03req/s] [内存消耗：1,420.15kb] [文件加载：60]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'login',
+  'route' => 'admin/Gate/login',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'purpose' => 'prefetch',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/login' => '',
+)
+[ info ] [ VIEW ] ../view/gate\login.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-04-10T09:02:24+08:00] 127.0.0.1 GET tp.top/home
+[运行时间：0.037002s] [吞吐率：27.03req/s] [内存消耗：1,014.91kb] [文件加载：51]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ error ] [0]类型错误: Argument 1 passed to think\Middleware::import() must be of the type array, string given, called in D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\library\think\route\Dispatch.php on line 112[D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\library\think\Middleware.php:48]
+---------------------------------------------------------------
+[2019-04-10T09:02:52+08:00] 127.0.0.1 GET tp.top/home
+[运行时间：0.043002s] [吞吐率：23.25req/s] [内存消耗：1,533.50kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'home',
+  'route' => 'admin/home/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 'login',
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/home' => '',
+)
+[ info ] [ VIEW ] ../view/home\index.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-04-10T09:28:51+08:00] 127.0.0.1 GET tp.top/login
+[运行时间：0.021001s] [吞吐率：47.62req/s] [内存消耗：1,425.96kb] [文件加载：60]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'login',
+  'route' => 'admin/Gate/login',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'purpose' => 'prefetch',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/login' => '',
+)
+[ info ] [ VIEW ] ../view/gate\login.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-04-10T09:33:45+08:00] 127.0.0.1 GET tp.top/login
+[运行时间：0.068004s] [吞吐率：14.71req/s] [内存消耗：1,541.27kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'login',
+  'route' => 'admin/Gate/login',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/login' => '',
+)
+[ info ] [ VIEW ] ../view/gate\login.html [ array (
+) ]
+---------------------------------------------------------------
+[2019-04-10T09:33:48+08:00] 127.0.0.1 POST tp.top/login
+[运行时间：0.048002s] [吞吐率：20.83req/s] [内存消耗：1,020.87kb] [文件加载：51]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2019-04-10T09:33:49+08:00] 127.0.0.1 POST tp.top/login
+[运行时间：0.014001s] [吞吐率：71.42req/s] [内存消耗：1,020.87kb] [文件加载：51]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2019-04-10T09:34:51+08:00] 127.0.0.1 POST tp.top/login
+[运行时间：0.034002s] [吞吐率：29.41req/s] [内存消耗：1,020.87kb] [文件加载：51]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[2019-04-10T09:35:40+08:00] 127.0.0.1 GET tp.top/tologin
+[运行时间：0.036002s] [吞吐率：27.78req/s] [内存消耗：1,429.48kb] [文件加载：63]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'tologin',
+  'route' => 'admin/Gate/tologin',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'middleware' => 
+    array (
+      0 => 'login',
+      1 => 
+      array (
+        0 => 'vlogin',
+        1 => NULL,
+      ),
+    ),
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/tologin' => '',
+)
+[ error ] [0]方法不存在:think\Request->validate[D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\library\think\Request.php:334]
+---------------------------------------------------------------
+[2019-04-10T09:39:28+08:00] 127.0.0.1 GET tp.top/message
+[运行时间：0.058003s] [吞吐率：17.24req/s] [内存消耗：2,608.09kb] [文件加载：78]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'message',
+  'route' => 'index/message/index',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'purpose' => 'prefetch',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/message' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\index.html [ array (
+  0 => 'msgs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.021001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:39:31+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=1&limit=5
+[运行时间：0.061004s] [吞吐率：16.39req/s] [内存消耗：2,539.55kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/message',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '1',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-04-10T09:39:34+08:00] 127.0.0.1 GET tp.top/index/message/index?page=2
+[运行时间：0.077004s] [吞吐率：12.99req/s] [内存消耗：2,617.15kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/message',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/index' => '',
+  'page' => '2',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\index.html [ array (
+  0 => 'msgs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 5,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:39:34+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=1&limit=5
+[运行时间：0.049002s] [吞吐率：20.41req/s] [内存消耗：2,539.70kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=2',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '1',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:39:35+08:00] 127.0.0.1 GET tp.top/index/message/index?page=3
+[运行时间：0.111006s] [吞吐率：9.01req/s] [内存消耗：2,617.27kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=2',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/index' => '',
+  'page' => '3',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\index.html [ array (
+  0 => 'msgs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.034002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 10,5 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-04-10T09:39:35+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=1&limit=5
+[运行时间：0.048002s] [吞吐率：20.83req/s] [内存消耗：2,539.70kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '1',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:39:35+08:00] 127.0.0.1 GET tp.top/index/message/index?page=4
+[运行时间：0.086005s] [吞吐率：11.63req/s] [内存消耗：2,617.24kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=3',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/index' => '',
+  'page' => '4',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\index.html [ array (
+  0 => 'msgs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 15,5 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-04-10T09:39:36+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=1&limit=5
+[运行时间：0.058003s] [吞吐率：17.24req/s] [内存消耗：2,539.70kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=4',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '1',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:39:39+08:00] 127.0.0.1 DELETE tp.top/index/message/delete/0/id.html
+[运行时间：0.078004s] [吞吐率：12.82req/s] [内存消耗：2,503.75kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=4',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://tp.top',
+  'accept' => '*/*',
+  'content-length' => '20',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  'delete' => 
+  array (
+    '_method' => 'DELETE',
+    'id' => '16',
+  ),
+  '/index/message/delete/0/id_html' => '',
+  'id' => '16',
+  0 => 'id',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE (  `id` = 16 ) AND `info`.`delete_time` IS NULL [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `info`  SET `delete_time` = '1554860379'  WHERE (  `id` = 16 ) AND `info`.`delete_time` IS NULL [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:39:43+08:00] 127.0.0.1 GET tp.top/index/message/index?page=1
+[运行时间：0.085005s] [吞吐率：11.76req/s] [内存消耗：2,619.41kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=4',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/index' => '',
+  'page' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\index.html [ array (
+  0 => 'msgs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.022001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:39:43+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=1&limit=5
+[运行时间：0.045003s] [吞吐率：22.22req/s] [内存消耗：2,539.70kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '1',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:39:46+08:00] 127.0.0.1 DELETE tp.top/index/message/delete/0/id.html
+[运行时间：0.084005s] [吞吐率：11.90req/s] [内存消耗：2,504.08kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://tp.top',
+  'accept' => '*/*',
+  'content-length' => '19',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  'delete' => 
+  array (
+    '_method' => 'DELETE',
+    'id' => '1',
+  ),
+  '/index/message/delete/0/id_html' => '',
+  'id' => '1',
+  0 => 'id',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE (  `id` = 1 ) AND `info`.`delete_time` IS NULL [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `info`  SET `delete_time` = '1554860386'  WHERE (  `id` = 1 ) AND `info`.`delete_time` IS NULL [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:39:50+08:00] 127.0.0.1 GET tp.top/index/message/index?page=1
+[运行时间：0.066004s] [吞吐率：15.15req/s] [内存消耗：2,618.72kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/index' => '',
+  'page' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\index.html [ array (
+  0 => 'msgs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:39:50+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=1&limit=5
+[运行时间：0.049003s] [吞吐率：20.41req/s] [内存消耗：2,539.00kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '1',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:39:57+08:00] 127.0.0.1 DELETE tp.top/index/message/delete/0/id.html
+[运行时间：0.072004s] [吞吐率：13.89req/s] [内存消耗：2,504.27kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://tp.top',
+  'accept' => '*/*',
+  'content-length' => '19',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  'delete' => 
+  array (
+    '_method' => 'DELETE',
+    'id' => '2',
+  ),
+  '/index/message/delete/0/id_html' => '',
+  'id' => '2',
+  0 => 'id',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE (  `id` = 2 ) AND `info`.`delete_time` IS NULL [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `info`  SET `delete_time` = '1554860397'  WHERE (  `id` = 2 ) AND `info`.`delete_time` IS NULL [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:40:00+08:00] 127.0.0.1 GET tp.top/index/message/index?page=1
+[运行时间：0.067004s] [吞吐率：14.92req/s] [内存消耗：2,618.06kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/index' => '',
+  'page' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\index.html [ array (
+  0 => 'msgs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:40:00+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=1&limit=5
+[运行时间：0.043003s] [吞吐率：23.25req/s] [内存消耗：2,538.34kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '1',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:40:22+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=2&limit=5
+[运行时间：0.058003s] [吞吐率：17.24req/s] [内存消耗：2,537.45kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '2',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 5,5 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-04-10T09:40:25+08:00] 127.0.0.1 DELETE tp.top/index/message/delete/0/id.html
+[运行时间：0.090005s] [吞吐率：11.11req/s] [内存消耗：2,503.72kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://tp.top',
+  'accept' => '*/*',
+  'content-length' => '19',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  'delete' => 
+  array (
+    '_method' => 'DELETE',
+    'id' => '8',
+  ),
+  '/index/message/delete/0/id_html' => '',
+  'id' => '8',
+  0 => 'id',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.024002s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE (  `id` = 8 ) AND `info`.`delete_time` IS NULL [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `info`  SET `delete_time` = '1554860425'  WHERE (  `id` = 8 ) AND `info`.`delete_time` IS NULL [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-04-10T09:40:28+08:00] 127.0.0.1 GET tp.top/index/message/index?page=1
+[运行时间：0.084005s] [吞吐率：11.90req/s] [内存消耗：2,618.06kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/index' => '',
+  'page' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\index.html [ array (
+  0 => 'msgs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.021001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-04-10T09:40:28+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=1&limit=5
+[运行时间：0.047002s] [吞吐率：21.28req/s] [内存消耗：2,538.34kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '1',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:40:33+08:00] 127.0.0.1 DELETE tp.top/index/message/delete/0/id.html
+[运行时间：0.062003s] [吞吐率：16.13req/s] [内存消耗：2,504.14kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://tp.top',
+  'accept' => '*/*',
+  'content-length' => '19',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  'delete' => 
+  array (
+    '_method' => 'DELETE',
+    'id' => '3',
+  ),
+  '/index/message/delete/0/id_html' => '',
+  'id' => '3',
+  0 => 'id',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE (  `id` = 3 ) AND `info`.`delete_time` IS NULL [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `info`  SET `delete_time` = '1554860433'  WHERE (  `id` = 3 ) AND `info`.`delete_time` IS NULL [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:40:36+08:00] 127.0.0.1 GET tp.top/index/message/index?page=1
+[运行时间：0.070004s] [吞吐率：14.28req/s] [内存消耗：2,617.23kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/index' => '',
+  'page' => '1',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\index.html [ array (
+  0 => 'msgs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:40:36+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=1&limit=5
+[运行时间：0.055003s] [吞吐率：18.18req/s] [内存消耗：2,537.52kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '1',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:40:39+08:00] 127.0.0.1 GET tp.top/message/4/edit
+[运行时间：0.128008s] [吞吐率：7.81req/s] [内存消耗：2,661.68kb] [文件加载：78]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'message/<id>/edit',
+  'route' => 'index/message/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+    'id' => '4',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index?page=1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/message/4/edit' => '',
+  'id' => '4',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\edit.html [ array (
+  0 => 'msg',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE (  `id` = 4 ) AND `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-04-10T09:40:43+08:00] 127.0.0.1 GET tp.top/index/message/index.html
+[运行时间：0.064004s] [吞吐率：15.62req/s] [内存消耗：2,617.27kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/message/4/edit',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/index_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\index.html [ array (
+  0 => 'msgs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:40:43+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=1&limit=5
+[运行时间：0.044002s] [吞吐率：22.73req/s] [内存消耗：2,537.38kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '1',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:43:29+08:00] 127.0.0.1 GET tp.top/index/message/index.html
+[运行时间：0.074004s] [吞吐率：13.51req/s] [内存消耗：2,617.33kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/message/4/edit',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/index_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\index.html [ array (
+  0 => 'msgs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:43:30+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=1&limit=5
+[运行时间：0.061004s] [吞吐率：16.39req/s] [内存消耗：2,537.38kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '1',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:43:32+08:00] 127.0.0.1 DELETE tp.top/index/message/delete/0/id.html
+[运行时间：0.076005s] [吞吐率：13.16req/s] [内存消耗：2,503.71kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://tp.top',
+  'accept' => '*/*',
+  'content-length' => '19',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  'delete' => 
+  array (
+    '_method' => 'DELETE',
+    'id' => '4',
+  ),
+  '/index/message/delete/0/id_html' => '',
+  'id' => '4',
+  0 => 'id',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE (  `id` = 4 ) AND `info`.`delete_time` IS NULL [ RunTime:0.001000s ]
+[ sql ] [ SQL ] UPDATE `info`  SET `delete_time` = '1554860612'  WHERE (  `id` = 4 ) AND `info`.`delete_time` IS NULL [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:43:33+08:00] 127.0.0.1 GET tp.top/index/message/index.html
+[运行时间：0.070004s] [吞吐率：14.28req/s] [内存消耗：2,617.33kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/message/4/edit',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/index_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\index.html [ array (
+  0 => 'msgs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-04-10T09:43:34+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=1&limit=5
+[运行时间：0.055003s] [吞吐率：18.18req/s] [内存消耗：2,537.38kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '1',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:43:36+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=2&limit=5
+[运行时间：0.069004s] [吞吐率：14.49req/s] [内存消耗：2,537.40kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '2',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 5,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:43:37+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=3&limit=5
+[运行时间：0.078005s] [吞吐率：12.82req/s] [内存消耗：2,537.26kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '3',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 10,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:43:38+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=1&limit=5
+[运行时间：0.080004s] [吞吐率：12.50req/s] [内存消耗：2,537.38kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '1',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:45:27+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=2&limit=5
+[运行时间：0.095006s] [吞吐率：10.53req/s] [内存消耗：2,537.40kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '2',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.026002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 5,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:45:28+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=3&limit=5
+[运行时间：0.104006s] [吞吐率：9.61req/s] [内存消耗：2,537.26kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '3',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.029001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 10,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:45:33+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=2&limit=5
+[运行时间：0.085005s] [吞吐率：11.76req/s] [内存消耗：2,537.40kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '2',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 5,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:45:34+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=1&limit=5
+[运行时间：0.060004s] [吞吐率：16.67req/s] [内存消耗：2,537.38kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '1',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:45:34+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=3&limit=5
+[运行时间：0.081004s] [吞吐率：12.35req/s] [内存消耗：2,537.26kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '3',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 10,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:45:35+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=2&limit=5
+[运行时间：0.070004s] [吞吐率：14.28req/s] [内存消耗：2,537.40kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '2',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 5,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:45:35+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=3&limit=5
+[运行时间：0.091006s] [吞吐率：10.99req/s] [内存消耗：2,537.26kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '3',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 10,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:45:58+08:00] 127.0.0.1 GET tp.top/message/17/edit
+[运行时间：0.082005s] [吞吐率：12.19req/s] [内存消耗：2,545.34kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'message/<id>/edit',
+  'route' => 'index/message/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+    'id' => '17',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/message/17/edit' => '',
+  'id' => '17',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\edit.html [ array (
+  0 => 'msg',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE (  `id` = 17 ) AND `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-04-10T09:46:00+08:00] 127.0.0.1 GET tp.top/index/message/index.html
+[运行时间：0.086005s] [吞吐率：11.63req/s] [内存消耗：2,617.27kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/message/17/edit',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/index_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\index.html [ array (
+  0 => 'msgs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:46:00+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=1&limit=5
+[运行时间：0.043003s] [吞吐率：23.25req/s] [内存消耗：2,537.38kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '1',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:46:08+08:00] 127.0.0.1 GET tp.top/message/7/edit
+[运行时间：0.095005s] [吞吐率：10.53req/s] [内存消耗：2,545.31kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'message/<id>/edit',
+  'route' => 'index/message/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+    'id' => '7',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/message/7/edit' => '',
+  'id' => '7',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\edit.html [ array (
+  0 => 'msg',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.029002s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE (  `id` = 7 ) AND `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-04-10T09:46:10+08:00] 127.0.0.1 GET tp.top/index/message/index.html
+[运行时间：0.074005s] [吞吐率：13.51req/s] [内存消耗：2,617.27kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/message/7/edit',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/index_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\index.html [ array (
+  0 => 'msgs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-04-10T09:46:10+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=1&limit=5
+[运行时间：0.049003s] [吞吐率：20.41req/s] [内存消耗：2,537.38kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '1',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.012000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:46:12+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=3&limit=5
+[运行时间：0.078005s] [吞吐率：12.82req/s] [内存消耗：2,537.26kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '3',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 10,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:46:22+08:00] 127.0.0.1 GET tp.top/message/19/edit
+[运行时间：0.070004s] [吞吐率：14.28req/s] [内存消耗：2,545.34kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'message/<id>/edit',
+  'route' => 'index/message/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+    'id' => '19',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/message/19/edit' => '',
+  'id' => '19',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\edit.html [ array (
+  0 => 'msg',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE (  `id` = 19 ) AND `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:46:26+08:00] 127.0.0.1 POST tp.top/index/message/update/id/19.html
+[运行时间：0.097005s] [吞吐率：10.31req/s] [内存消耗：2,638.45kb] [文件加载：78]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/message/19/edit',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://tp.top',
+  'accept' => '*/*',
+  'content-length' => '70',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/update/id/19_html' => '',
+  'title' => '1',
+  'msg' => '                            456          555              ',
+  'id' => '19',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] UPDATE `info`  SET `title` = '1' , `msg` = '                            456          555              '  WHERE (  `id` = 19 ) AND `info`.`delete_time` IS NULL [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-04-10T09:46:29+08:00] 127.0.0.1 POST tp.top/index/message/update/id/19.html
+[运行时间：0.109006s] [吞吐率：9.17req/s] [内存消耗：2,587.73kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/message/19/edit',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'origin' => 'http://tp.top',
+  'accept' => '*/*',
+  'content-length' => '70',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/update/id/19_html' => '',
+  'title' => '1',
+  'msg' => '                            456          555              ',
+  'id' => '19',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.030002s ]
+[ sql ] [ SQL ] UPDATE `info`  SET `title` = '1' , `msg` = '                            456          555              '  WHERE (  `id` = 19 ) AND `info`.`delete_time` IS NULL [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-04-10T09:46:41+08:00] 127.0.0.1 GET tp.top/index/message/index.html
+[运行时间：0.060003s] [吞吐率：16.67req/s] [内存消耗：2,617.27kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/message/19/edit',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/index_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\index.html [ array (
+  0 => 'msgs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-04-10T09:46:41+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=1&limit=5
+[运行时间：0.046002s] [吞吐率：21.74req/s] [内存消耗：2,537.38kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '1',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:46:43+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=3&limit=5
+[运行时间：0.064003s] [吞吐率：15.62req/s] [内存消耗：2,537.31kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '3',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 10,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:46:45+08:00] 127.0.0.1 GET tp.top/message/19/edit
+[运行时间：0.055003s] [吞吐率：18.18req/s] [内存消耗：2,545.40kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'message/<id>/edit',
+  'route' => 'index/message/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+    'id' => '19',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/message/19/edit' => '',
+  'id' => '19',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\edit.html [ array (
+  0 => 'msg',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE (  `id` = 19 ) AND `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.001000s ]
+---------------------------------------------------------------
+[2019-04-10T09:46:47+08:00] 127.0.0.1 GET tp.top/message/19/edit
+[运行时间：0.082004s] [吞吐率：12.19req/s] [内存消耗：2,545.46kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'rule' => 'message/<id>/edit',
+  'route' => 'index/message/edit',
+  'option' => 
+  array (
+    'merge_rule_regex' => false,
+    'complete_match' => true,
+  ),
+  'var' => 
+  array (
+    'id' => '19',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/message/19/edit' => '',
+  'id' => '19',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\edit.html [ array (
+  0 => 'msg',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE (  `id` = 19 ) AND `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:46:49+08:00] 127.0.0.1 GET tp.top/index/message/index.html
+[运行时间：0.095006s] [吞吐率：10.53req/s] [内存消耗：2,617.27kb] [文件加载：79]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/message/19/edit',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/index_html' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ../view/message\index.html [ array (
+  0 => 'msgs',
+) ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.023001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[2019-04-10T09:46:49+08:00] 127.0.0.1 GET tp.top/index/message/page.html?page=1&limit=5
+[运行时间：0.052003s] [吞吐率：19.23req/s] [内存消耗：2,537.38kb] [文件加载：76]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://tp.top/index/message/index.html',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'x-requested-with' => 'XMLHttpRequest',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+  '/index/message/page_html' => '',
+  'page' => '1',
+  'limit' => '5',
+)
+[ info ] [ DB ] INIT mysql
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=tp;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `info` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `info` WHERE `info`.`delete_time` IS NULL LIMIT 0,5 [ RunTime:0.000000s ]

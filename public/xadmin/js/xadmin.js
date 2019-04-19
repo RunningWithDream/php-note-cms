@@ -407,7 +407,6 @@ function x_admin_close(){
 }
 
 function x_admin_father_reload(){
-    
     parent.location.reload();
 }
 
@@ -453,5 +452,76 @@ function x_admin_add_to_tab(title,url,is_refresh) {
     tab.tabChange(id);
 }
 
+
+//取出对象中某一个元素并加入数组中
+function getFieldArr(arr,field){
+    if(arr.length<=0) return [];
+    var newArr = [];
+    for(var i in arr) {
+        newArr.push(arr[i][field]);
+    }
+    return newArr;
+}
+
+
+
+//表格操作
+var  tableOperate = {
+    //添加
+    add:function(url){
+        location.replace(url);
+    },
+    //编辑
+    edit:function(url){
+        location.replace(url);
+    },
+    //删除
+    del:function(url,json,success,error,msg){
+        var m = msg?msg:'确定删除吗？';
+        layer.confirm(m, function(index){
+            layer.close(index);
+            $.post(url,json,function(data){
+                if(data.code==0){
+                    success(data);
+                }else{
+                    error(data);
+                }
+            },'json')
+        });
+    },
+    //设置状态
+    setStatus:function(url,json,isConfirm,success,error,msg){
+        var m = msg?msg:'确定批量操作么？';
+        if(isConfirm==true){
+            layer.confirm(m, function(index){
+                layer.close(index);
+                $.post(url, json, function (data) {
+                    if(data.code==1){
+                        success(data);
+                    }else{
+                        error(data);
+                    }
+                },'json')
+            });
+        }else{
+            $.post(url,json,function (data) {
+                if(data.code==1){
+                    success(data);
+                }else{
+                    error(data);
+                }
+            },'json')
+        }
+    },
+}
+
+//清除缓存
+
+function clearCache(url){
+    $.get(url,'',function (data) {
+        layer.msg(data.msg)
+    },'json')
+
+}
 
 

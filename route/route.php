@@ -9,7 +9,6 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-
 Route::get('/','admin/Gate/login');
 Route::get('login','admin/Gate/login');
 Route::get('index','admin/Home/index');
@@ -20,13 +19,21 @@ Route::get('admin-list','admin/Admin/index');
 Route::get('admin-add','admin/Admin/create');
 Route::get('admin-edit','admin/Admin/edit');
 Route::post('admin-save','admin/Admin/save');
+Route::post('admin-update','admin/Admin/update');
+Route::post('admin-delete','admin/Admin/delete');
+Route::post('admin-delMulti','admin/Admin/delMulti');
+Route::post('admin-status','admin/Admin/status');
+
+
 
 
 Route::get('admin-role','admin/Role/index');
 Route::get('role-add','admin/Role/create');
+//Route::rule('role-save','admin/Role/save')->method('post');
 
 
 
+Route::rule('test','admin/Role/test')->method('get');
 
 
 

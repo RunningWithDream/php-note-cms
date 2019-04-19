@@ -36,4 +36,11 @@ class Admin extends Validate
         'email.require'   => '邮箱不能为空',
         'status.require'   => '状态不能为空',
     ];
+
+    /**
+     * @var array 验证场景
+     */
+    protected $scene = [
+        'update'  =>  ['password','repass'],
+    ];
 }

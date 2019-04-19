@@ -2,40 +2,41 @@
 {block name="content"}
 <div class="x-body">
     <form class="layui-form">
+        <input type="text" value="{$info['id']}" name="id" hidden>
         <div class="layui-form-item">
             <label for="username" class="layui-form-label">
-                <span class="x-red">*</span>登录名
+                登录名
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="username" name="username" required="" lay-verify="required"
-                       autocomplete="off" class="layui-input" value="{}">
+                       autocomplete="off" class="layui-input" value="{$info['username']}" disabled>
             </div>
             <div class="layui-form-mid layui-word-aux">
-                <span class="x-red">*</span>将会成为您唯一的登入名
+                <span class="x-red">*</span>不可修改
             </div>
         </div>
         <div class="layui-form-item">
             <label for="phone" class="layui-form-label">
-                <span class="x-red">*</span>手机
+                手机
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="phone" name="phone" required="" lay-verify="phone"
-                       autocomplete="off" class="layui-input">
+                       autocomplete="off" class="layui-input" value="{$info['phone']}" disabled>
             </div>
             <div class="layui-form-mid layui-word-aux">
-                <span class="x-red">*</span>将会成为您唯一的登入名
+                <span class="x-red">*</span>不可修改
             </div>
         </div>
         <div class="layui-form-item">
             <label for="email" class="layui-form-label">
-                <span class="x-red">*</span>邮箱
+                邮箱
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="email" name="email" required="" lay-verify="email"
-                       autocomplete="off" class="layui-input">
+                       autocomplete="off" class="layui-input" value="{$info['email']}" disabled>
             </div>
             <div class="layui-form-mid layui-word-aux">
-                <span class="x-red"></span>
+                <span class="x-red">*</span>不可修改
             </div>
         </div>
         <div class="layui-form-item">
@@ -44,10 +45,7 @@
             </label>
             <div class="layui-input-inline">
                 <input type="text" id="nickname" name="nickname" lay-verify="nickname"
-                       autocomplete="off" class="layui-input">
-            </div>
-            <div class="layui-form-mid layui-word-aux">
-                <span class="x-red"></span>
+                       autocomplete="off" class="layui-input" value="{$info['nickname']}">
             </div>
         </div>
         <div class="layui-form-item">
@@ -59,31 +57,18 @@
             </div>
         </div>
         <div class="layui-form-item">
-            <label for="L_pass" class="layui-form-label">
-                <span class="x-red">*</span>密码
-            </label>
-            <div class="layui-input-inline">
-                <input type="password" id="L_pass" name="password" required="" lay-verify="pass"
-                       autocomplete="off" class="layui-input">
-            </div>
-            <div class="layui-form-mid layui-word-aux">
-                6到12个字符
-            </div>
-        </div>
-        <div class="layui-form-item">
             <label for="L_repass" class="layui-form-label">
-                <span class="x-red">*</span>确认密码
+                新密码
             </label>
             <div class="layui-input-inline">
-                <input type="password" id="L_repass" name="repass" required="" lay-verify="repass"
-                       autocomplete="off" class="layui-input">
+                <input type="password" id="L_repass" name="password" autocomplete="off" class="layui-input" lay-verify="pass">
             </div>
         </div>
         <div class="layui-form-item">
             <label for="L_repass" class="layui-form-label">
             </label>
-            <button  class="layui-btn" lay-filter="add" lay-submit="">
-                增加
+            <button class="layui-btn" lay-filter="update" lay-submit="">
+                修改
             </button>
         </div>
     </form>
@@ -91,34 +76,32 @@
 {/block}
 {block name="script"}
 <script>
-    layui.use(['form','layer'], function(){
+    layui.use(['form', 'layer'], function () {
         var $ = layui.jquery,
             form = layui.form
-            ,layer = layui.layer;
+            , layer = layui.layer;
 
         //自定义验证规则
         form.verify({
-            nickname: function(value){
-                if(value.length < 5){
+            nickname: function (value) {
+                if (value.length < 5) {
                     return '昵称至少得5个字符啊';
                 }
             }
-            ,pass: [/(.+){6,12}$/, '密码必须6到12位']
-            ,repass: function(value){
-                if($('#L_pass').val()!=$('#L_repass').val()){
-                    return '两次密码不一致';
+            , pass: function (value) {
+                if (value.length >= 1 && value.length < 5) {
+                    return '密码必须6到12位';
                 }
             }
         });
 
         //监听提交
-        form.on('submit(add)', function(data){
-            console.log(data);
+        form.on('submit(update)', function (data) {
             //发异步，把数据提交给php
-            $.post('{:url("admin/admin/save")}',data.field,function (data) {
-                switch(data.code){
+            $.post('{:url("admin/admin/update")}', data.field, function (data) {
+                switch (data.code) {
                     case 0:
-                        layer.alert(data.msg, {icon: 6},function () {
+                        layer.alert(data.msg, {icon: 6}, function () {
                             // 获得frame索引
                             var index = parent.layer.getFrameIndex(window.name);
                             //关闭当前frame

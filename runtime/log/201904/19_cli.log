@@ -1,0 +1,12 @@
+[2019-04-19T15:56:37+08:00][ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+info
+[2019-04-19T17:49:01+08:00][ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+info
+[2019-04-19T17:59:49+08:00][ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+info
+[2019-04-19T17:59:49+08:00][ error ] [0]Fatal error: Call to a member function getName() on string[D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\library\think\Console.php:491]
+error
+[2019-04-19T18:00:14+08:00][ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+info
+[2019-04-19T18:04:22+08:00][ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+info

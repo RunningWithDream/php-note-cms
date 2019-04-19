@@ -70,14 +70,25 @@ class AdminService
      * 函数描述:验证提交的管理员信息是否合法
      * @return bool
      */
-    public function validation($data)
+    public function validation($data, $scene = [])
     {
         $validate = new \app\admin\validate\Admin;
-        if ($validate->check($data)) {
+        if ($validate->scene($scene)->check($data)) {
             return true;
         }
         $this->error = $validate->getError();
         return false;
+    }
+
+    /**
+     * 函数名称:status
+     * 函数描述:管理员是否启用
+     * @param $id
+     * @param $status
+     */
+    public function status($id, $status)
+    {
+        Admin::update(['id' => $id, 'status' => $status]);
     }
 
     /**
@@ -91,17 +102,17 @@ class AdminService
             return false;
         }
 
-        if ($this->getByName($data['username'])) {
+        if ($this->get(['username' => $data['username']])) {
             $this->error = '该用户名已存在';
             return false;
         }
 
-        if ($this->getByPhone($data['phone'])) {
+        if ($this->get(['phone' => $data['phone']])) {
             $this->error = '该手机已存在';
             return false;
         }
 
-        if ($this->getByEmail($data['email'])) {
+        if ($this->get(['email' => $data['email']])) {
             $this->error = '该邮箱已存在';
             return false;
         }
@@ -115,33 +126,47 @@ class AdminService
     }
 
     /**
-     * 函数名称:getByName
-     * 函数描述:根据用户名获取用户信息
-     * @param $username
+     * 函数名称:update
+     * 函数描述:更新信息
      */
-    public function getByName($username)
+    public function update($data)
     {
-        return Admin::where('username', $username)->select()->toArray();
+        Admin::update($data);
     }
 
     /**
-     * 函数名称:getByPhone
-     * 函数描述:根据手机获取用户信息
-     * @param $phone
+     * 函数名称:delete
+     * 函数描述:根据索引删除
+     * @param $id
      */
-    public function getByPhone($phone)
+    public function delete($id)
     {
-        return Admin::where('phone', $phone)->select()->toArray();
+        return Admin::where(['id' => $id])->delete();
+    }
+
+
+    /**
+     * 函数名称:delMulti
+     * 函数描述:批量删除
+     * @param $ids
+     */
+    public function delMulti($ids)
+    {
+        return Admin::destroy($ids);
     }
 
     /**
-     * 函数名称:getByEmail
-     * 函数描述:根据email获取用户信息
-     * @param $email
+     * 函数名称:get
+     * 函数描述:获取账户信息
+     * @param $where
+     * @return array
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\ModelNotFoundException
+     * @throws \think\exception\DbException
      */
-    public function getByEmail($email)
+    public function get($where)
     {
-        return Admin::where('email', $email)->select()->toArray();
+        return Admin::where($where)->select()->toArray();
     }
 
     /**

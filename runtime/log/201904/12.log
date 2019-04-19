@@ -1,0 +1,20 @@
+---------------------------------------------------------------
+[2019-04-12T11:35:52+08:00] 127.0.0.1 GET tp.top/
+[运行时间：1.839105s] [吞吐率：0.54req/s] [内存消耗：1,616.62kb] [文件加载：65]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\tp51\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cookie' => 'pgv_pvi=2197849088',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'accept-encoding' => 'gzip, deflate',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36',
+  'upgrade-insecure-requests' => '1',
+  'connection' => 'close',
+  'host' => 'tp.top',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] ../view/gate\login.html [ array (
+) ]

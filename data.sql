@@ -70,10 +70,14 @@ CREATE TABLE IF NOT EXISTS `rbac_node` (
 CREATE TABLE IF NOT EXISTS `rbac_role` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `rolename` VARCHAR(25) NOT NULL COMMENT '角色名',
+  `desc` VARCHAR(100) NOT NULL COMMENT '角色描述',
   `status` INT(11) NOT NULL DEFAULT '1' COMMENT '状态(1:正常,0停用)',
+  `create_time` int(11) unsigned NULL DEFAULT NULL COMMENT '',
+  `update_time` int(11) unsigned NULL DEFAULT NULL COMMENT '',
+  `delete_time` int(11) unsigned NULL DEFAULT NULL COMMENT '',
   PRIMARY KEY (`id`),
   UNIQUE KEY `rolename` (`rolename`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='角色表' AUTO_INCREMENT=4 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='角色表' AUTO_INCREMENT=0 ;
 
 CREATE TABLE IF NOT EXISTS `rbac_user` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
